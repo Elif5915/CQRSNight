@@ -21,7 +21,7 @@ builder.Services.AddScoped<RemoveProductCommandHandler>();
 
 builder.Services.AddDbContext<CQRSContext>();
 
-
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
 
 builder.Services.AddControllersWithViews();
 
